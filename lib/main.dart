@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/home.dart';
 import 'package:news_app/provider/language_provider.dart';
 import 'package:news_app/provider/theme_provider.dart';
+import 'package:news_app/ui/home/category_details/category_details.dart';
+import 'package:news_app/ui/home/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'app_utls/app_theme.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MultiProvider(providers: [
@@ -23,13 +25,14 @@ class MyApp extends StatelessWidget {
     var themeProvider = Provider.of<AppThemeProvider>(context);
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: HomePage.routeName,
+        initialRoute: HomeScreen.routeName,
         routes: {
-          HomePage.routeName: (context) => HomePage(),
+          HomeScreen.routeName: (context) => HomeScreen(),
+          CategoryDetails.routeName: (context) => CategoryDetails(),
         },
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
-        themeMode: themeProvider.appTheme,
+        themeMode: ThemeMode.light,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         locale: Locale(languageProvider.appLanguage));
