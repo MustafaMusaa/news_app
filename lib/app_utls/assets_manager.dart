@@ -3,31 +3,19 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 
 class AssetsManager {
-  static const String iconHome = "assets/images/iconHome.png";
-  static const String iconMap = "assets/images/iconMap.png";
-  static const String iconLike = "assets/images/unslected_like_tab.png";
-  static const String iconProfile = "assets/images/unslected_pofile_tab.png";
-  static const String iconHomeSelected = "assets/images/selected_home_tab.png";
-  static const String iconMapSelected = "assets/images/selected_map_tab.png";
-  static const String iconLikeSelected = "assets/images/selected_like_tab.png";
-  static const String iconProfileSelected =
-      "assets/images/selected_profile_tab.png";
-  static const String birthdayBg = "assets/images/birthdayBg.png";
-  static const String bookclubBg = "assets/images/bookclubBg.png";
-  static const String eatingBg = "assets/images/eatingBg.png";
-  static const String exhibitionBg = "assets/images/exhibitionBg.png";
-  static const String gamingBg = "assets/images/gamingBg.png";
-  static const String holidayBg = "assets/images/holidayBg.png";
-  static const String meetingBg = "assets/images/meetingBg.png";
-  static const String sportBg = "assets/images/sportBg.png";
-  static const String workshopBg = "assets/images/workshopBg.png";
-  static const String routeLogo = "assets/images/route_logo.png";
-  static const String logo = "assets/images/Logo.png";
-  static const String googleIcon = "assets/images/iconGoogle.png";
-  static const String forgetPassword = "assets/images/forgetpass.png";
-  static const String locationIcon = "assets/images/location_image.png";
-  static const String arrow_icon = "assets/images/arrow_icon.png";
-  static const String edite_icon = "assets/images/EditIcon.png";
-  static const String delete_icon = "assets/images/deleteIcon.png";
-  static const String date_Icon = "assets/images/dateIcon.png";
+  static const String business_dark = "assets/images/business_dark.png";
+  static const String business_light = "assets/images/business_light.png";
+  static const String entertainment_dark = "assets/images/entertainment_dark.png";
+  static const String entertainment_light = "assets/images/entertainment_light.png";
+  static const String general_dark = "assets/images/general_dark.png";
+  static const String general_light = "assets/images/general_light.png";
+  static const String health_dark = "assets/images/health_dark.png";
+  static const String health_light = "assets/images/health_light.png";
+  static const String science_dark = "assets/images/science_dark.png";
+  static const String science_light = "assets/images/science_light.png";
+  static const String sport_dark = "assets/images/sport_dark.png";
+  static const String sport_light = "assets/images/sport_light.png";
+  static const String technology_dark = "assets/images/technology_dark.png";
+  static const String technology_light = "assets/images/technology_light.png";
+
 }
