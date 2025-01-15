@@ -4,7 +4,7 @@ import 'app_colors.dart';
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.bglight,
-    appBarTheme: AppBarTheme(color: AppColors.primaryColorLight),
+    appBarTheme:const AppBarTheme(color: AppColors.white),
     primaryColor: AppColors.primaryColorLight,
     primaryColorLight: AppColors.bglight,
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
@@ -24,7 +24,7 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: AppColors.primaryColorDark,
       primaryColorDark: AppColors.primaryColorDark,
-      appBarTheme: AppBarTheme(color: AppColors.primaryColorDark),
+      appBarTheme:const AppBarTheme(color: AppColors.black),
       primaryColor: AppColors.primaryColorDark,
       primaryColorLight: AppColors.primaryColorDark,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(

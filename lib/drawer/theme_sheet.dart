@@ -54,12 +54,12 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
           style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w500,
-              color: AppColors.blue),
+              color: AppColors.black),
         ),
         Icon(
           Icons.check,
           size: 30,
-          color: AppColors.blue,
+          color: AppColors.black,
         ),
       ],
     );
