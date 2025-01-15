@@ -33,13 +33,14 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
-      sdk: flutter
+    sdk: flutter
   intl: any
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
@@ -95,3 +96,31 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_native_splash:
+  #color: "#FFFFFF"
+  background_image: "assets/images/splash_light.png"
+  # image: assets/images/splash_light.png
+  # branding: assets/dart.png
+  # branding_mode: bottom
+  # branding_bottom_padding: 24
+  #color_dark: "#2C2C2C"
+  background_image_dark: "assets/images/splash_dark.png"
+  #image_dark: assets/images/splash_dark.png
+  # branding_dark: assets/dart_dark.png
+  android_12:
+    image: assets/images/splash12Black.png
+    color: "#FFFFFF"
+    branding: assets/images/brandLight.png
+
+
+    # The image_dark, color_dark, icon_background_color_dark, and branding_dark set values that
+    # apply when the device is in dark mode. If they are not specified, the app will use the
+    # parameters from above.  If there is no parameter above, the app will use the light mode values.
+    image_dark: assets/images/splash12Light.png
+    color_dark: "#2C2C2C"
+  branding_bottom_padding_android: 24
+  branding_dark_android: assets/images/brandBlack.png
+
+  android: true
+  ios: true
+  web: true
