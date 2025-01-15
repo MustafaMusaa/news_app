@@ -1,0 +1,16 @@
+{
+  "language": "Language",
+  "english": "English",
+  "arabic" : "Arabic",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "home": "Home",
+  "cairo": "Cairo",
+  "egypt": "Egypt",
+  "date": "Date",
+  "time": "Time",
+  "all": "All",
+  "sport": "Sport",
+  "search": "Search"
+}
