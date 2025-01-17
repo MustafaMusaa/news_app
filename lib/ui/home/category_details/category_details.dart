@@ -15,13 +15,13 @@ class _CategoryDetailsState extends State<CategoryDetails> {
   Widget build(BuildContext context) {
     return FutureBuilder(
         future: ApiManager.getSources(),
-        builder: (context, snaphot){
-          if(snaphot.connectionState == ConnectionState.waiting){
+        builder: (context, snapshot){
+          if(snapshot.connectionState == ConnectionState.waiting){
             return Center(
               child: CircularProgressIndicator(
                 color: AppColors.black,
               ),);
-          }else if (snaphot.hasError){
+          }else if (snapshot.hasError){
             return Column(
               children: [
                 const Text('Something went wrong'),
@@ -36,10 +36,10 @@ class _CategoryDetailsState extends State<CategoryDetails> {
               ],
             );
           }
-          if (snaphot.data!.status == 'error'){
+          if (snapshot.data!.status == 'error'){
             return Column(
               children: [
-                Text(snaphot.data!.message!),
+                Text(snapshot.data!.message!),
                 ElevatedButton(
                     onPressed: (){
                       ApiManager.getSources();
@@ -51,7 +51,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
               ],
             );
           }
-          var sourceList = snaphot.data?.sources?? [];
+          var sourceList = snapshot.data?.sources?? [];
           return SourceTabWidget(sourceList: sourceList);
         });
   }
