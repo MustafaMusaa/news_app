@@ -36,7 +36,10 @@ class DrawerWidget extends StatelessWidget {
           Container(
             color: AppColors.white,
             height: height*0.23,
-            child: Center(child: Text(AppLocalizations.of(context)!.newsApp,style: AppStyle.black20w500,)),
+            child: Center(
+                child:
+                Text(AppLocalizations.of(context)!.newsApp,
+                  style: AppStyle.black20w500,)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -54,8 +57,7 @@ class DrawerWidget extends StatelessWidget {
                       SizedBox(width:width *0.01,),
                       Icon(Icons.home_filled,color: AppColors.white,),
                       SizedBox(width:width *0.01,),
-                      Text(AppLocalizations.of(context)!.goToHome,style: AppStyle.white20medium,)
-                    ],
+                      Text(AppLocalizations.of(context)!.goToHome,style: AppStyle.white20medium,)],
                   ),
                 ),
                 SizedBox(height:height* 0.02,),
