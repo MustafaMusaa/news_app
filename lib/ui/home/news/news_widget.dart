@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/api/api_manager.dart';
 import 'package:news_app/model/newsResponse.dart';
+import 'package:news_app/ui/home/news/news_item.dart';
 
 import '../../../app_utls/app_colors.dart';
 import '../../../model/SourceResponse.dart';
@@ -62,7 +63,7 @@ class _NewsWidgetState extends State<NewsWidget> {
           }
           var newsList = snapshot.data!.articles!;
           return ListView.builder(itemBuilder: (context, index){
-            return Text(newsList[index].title??"");
+            return NewsItem(news: newsList[index]);
           },
           itemCount: newsList.length,);
         }
