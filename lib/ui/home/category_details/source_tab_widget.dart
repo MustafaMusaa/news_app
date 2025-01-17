@@ -4,6 +4,7 @@ import 'package:news_app/app_utls/app_colors.dart';
 import 'package:news_app/app_utls/app_styles.dart';
 import 'package:news_app/model/SourceResponse.dart';
 import 'package:news_app/ui/home/category_details/source_name_widget.dart';
+import 'package:news_app/ui/home/news/news_widget.dart';
 
 class SourceTabWidget extends StatefulWidget {
   List<Source> sourceList;
@@ -23,24 +24,29 @@ class _SourceTabWidgetState extends State<SourceTabWidget> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: widget.sourceList.length,
-      child: TabBar(
-        dividerColor: AppColors.transparent,
-        indicatorColor: AppColors.black,
-        tabAlignment: TabAlignment.start,
-        isScrollable: true,
-        onTap: (index){
-          selectedIndex = index;
-          setState(() {
+      child: Column(
+        children: [
+          TabBar(
+            dividerColor: AppColors.transparent,
+            indicatorColor: AppColors.black,
+            tabAlignment: TabAlignment.start,
+            isScrollable: true,
+            onTap: (index){
+              selectedIndex = index;
+              setState(() {
 
-          });
-        },
-          tabs: widget.sourceList.map((source){
-        return SourceNameWidget(
-            source: source,
-            isSelected: selectedIndex == widget.sourceList.indexOf(source)
-        );
+              });
+            },
+              tabs: widget.sourceList.map((source){
+            return SourceNameWidget(
+                source: source,
+                isSelected: selectedIndex == widget.sourceList.indexOf(source)
+            );
 
-      }).toList()
+          }).toList()
+          ),
+          Expanded(child: NewsWidget(source: widget.sourceList[selectedIndex]))
+        ],
       ),
     );
   }
