@@ -12,7 +12,15 @@
   "date": "التاريخ",
   "goToHome": "الرئيسية",
   "time": "الوقت",
-  "all": "الكل",
-  "sport": "الرياضة",
+  "general": "العامة",
+  "sports": "الرياضة",
+  "technology": "التكنولوجيا",
+  "science": "العلوم",
+  "health": "الصحة",
+  "entertainment": "الترفيه",
+  "business": "الاقتصاد",
+  "viewAll": "عرض الكل",
+  "hello": "مرحبًا,,",
+  "hereIsSomeNewsForYou": "اليك بعض الاخبار",
   "search": "بحث"
 }

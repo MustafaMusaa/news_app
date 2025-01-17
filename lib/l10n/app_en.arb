@@ -12,7 +12,15 @@
   "date": "Date",
   "goToHome": "Go To Home",
   "time": "Time",
-  "all": "All",
-  "sport": "Sport",
+  "general": "General",
+  "sports": "Sports",
+  "technology": "Technology",
+  "science": "Science",
+  "health": "Health",
+  "entertainment": "Entertainment",
+  "business": "Business",
+  "viewAll": "View All",
+  "hello": "Hello,,",
+  "hereIsSomeNewsForYou": "Here is Some News For You",
   "search": "Search"
 }

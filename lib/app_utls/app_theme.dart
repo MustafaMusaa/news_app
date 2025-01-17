@@ -5,25 +5,32 @@ import 'app_colors.dart';
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
   scaffoldBackgroundColor: AppColors.white,
-  appBarTheme: AppBarTheme(
-  color: AppColors.white,
+  appBarTheme:const AppBarTheme(
+    iconTheme: IconThemeData(color: AppColors.black),
+    color: AppColors.white,
+  titleTextStyle: AppStyle.black20w500,
   centerTitle: true,),
-  textTheme: TextTheme(
+  textTheme:const
+  TextTheme(
   labelLarge: AppStyle.black20w500,),
+    indicatorColor: AppColors.black,
     primaryColor: AppColors.white,
-
   );
 
 
   static final ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: AppColors.black,
-  appBarTheme: AppBarTheme(
-  color: AppColors.black,
-  centerTitle: true,),
-  textTheme: TextTheme(
+  appBarTheme: const AppBarTheme(
+    iconTheme: IconThemeData(color: AppColors.white),
+
+    color: AppColors.black,
+    titleTextStyle: AppStyle.white20medium,
+    centerTitle: true,),
+  textTheme: const TextTheme(
   labelLarge: AppStyle.white20medium
   ),
-  primaryColor: AppColors.black,
+    indicatorColor: AppColors.white,
+    primaryColor: AppColors.black,
 
   );
 }

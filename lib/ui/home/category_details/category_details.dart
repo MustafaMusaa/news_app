@@ -17,7 +17,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
         future: ApiManager.getSources(),
         builder: (context, snapshot){
           if(snapshot.connectionState == ConnectionState.waiting){
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(
                 color: AppColors.black,
               ),);
@@ -51,7 +51,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
               ],
             );
           }
-          var sourceList = snapshot.data?.sources?? [];
+          var sourceList = snapshot.data!.sources ?? [];
           return SourceTabWidget(sourceList: sourceList);
         });
   }
