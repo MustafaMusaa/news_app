@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../app_utls/app_colors.dart';
-import '../provider/language_provider.dart';
+import '../../app_utls/app_colors.dart';
+import '../../provider/language_provider.dart';
 
 class LanguageBottomSheet extends StatefulWidget {
   const LanguageBottomSheet({super.key});

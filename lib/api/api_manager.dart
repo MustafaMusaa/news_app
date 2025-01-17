@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 import 'package:news_app/api/api_constants.dart';
 import 'package:news_app/api/end_points.dart';
 import 'package:news_app/model/SourceResponse.dart';
@@ -14,7 +14,7 @@ class ApiManager {
          'apiKey' : ApiConstants.apiKey
        });
      try{
-       var response = await http.get(url);
+       var response = await https.get(url);
        return SourceResponse.fromJson(jsonDecode(response.body));
      }catch (e){
        throw e;
@@ -29,7 +29,7 @@ class ApiManager {
        'sources' : sourceId,
      } );
      try{
-       var response = await http.get(url);
+       var response = await https.get(url);
        return NewsResponse.fromJson(jsonDecode(response.body));
      }catch (e){
        throw e;

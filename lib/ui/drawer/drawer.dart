@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:news_app/app_utls/app_colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:news_app/app_utls/app_styles.dart';
-import 'package:news_app/drawer/theme_sheet.dart';
+import 'package:news_app/ui/drawer/theme_sheet.dart';
 import 'package:provider/provider.dart';
-
-import '../provider/language_provider.dart';
-import '../provider/theme_provider.dart';
+import '../../provider/language_provider.dart';
+import '../../provider/theme_provider.dart';
 import 'language_sheet.dart';
 
 class DrawerWidget extends StatelessWidget {

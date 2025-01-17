@@ -9,9 +9,7 @@ import 'package:news_app/ui/home/news/news_widget.dart';
 class SourceTabWidget extends StatefulWidget {
   List<Source> sourceList;
 
-  SourceTabWidget({
-    required this.sourceList
-});
+  SourceTabWidget({required this.sourceList});
 
   @override
   State<SourceTabWidget> createState() => _SourceTabWidgetState();
@@ -27,24 +25,20 @@ class _SourceTabWidgetState extends State<SourceTabWidget> {
       child: Column(
         children: [
           TabBar(
-            dividerColor: AppColors.transparent,
-            indicatorColor: AppColors.black,
-            tabAlignment: TabAlignment.start,
-            isScrollable: true,
-            onTap: (index){
-              selectedIndex = index;
-              setState(() {
-
-              });
-            },
-              tabs: widget.sourceList.map((source){
-            return SourceNameWidget(
-                source: source,
-                isSelected: selectedIndex == widget.sourceList.indexOf(source)
-            );
-
-          }).toList()
-          ),
+              dividerColor: AppColors.transparent,
+              indicatorColor: AppColors.black,
+              tabAlignment: TabAlignment.start,
+              isScrollable: true,
+              onTap: (index) {
+                selectedIndex = index;
+                setState(() {});
+              },
+              tabs: widget.sourceList.map((source) {
+                return SourceNameWidget(
+                    source: source,
+                    isSelected:
+                        selectedIndex == widget.sourceList.indexOf(source));
+              }).toList()),
           Expanded(child: NewsWidget(source: widget.sourceList[selectedIndex]))
         ],
       ),
