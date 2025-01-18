@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as https;
 import 'package:news_app/api/api_constants.dart';
 import 'package:news_app/api/end_points.dart';
@@ -8,10 +9,12 @@ import 'package:news_app/model/newsResponse.dart';
 
 class ApiManager {
 
-   static Future<SourceResponse?> getSources()async{
+   static Future<SourceResponse?> getSources(String categoryId)async{
+
      Uri url = Uri.https(ApiConstants.baseUrl, EndPoints.sourceApi,
        {
-         'apiKey' : ApiConstants.apiKey
+         'apiKey' : ApiConstants.apiKey,
+         'category' : categoryId,
        });
      try{
        var response = await https.get(url);
