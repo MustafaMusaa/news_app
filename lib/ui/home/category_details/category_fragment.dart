@@ -6,6 +6,9 @@ import 'package:news_app/app_utls/app_styles.dart';
 import '../../../model/CategoryModel.dart';
 
 class CategoryFragment extends StatefulWidget {
+  Function onViewAllClicked;
+  CategoryFragment({required this.onViewAllClicked});
+
   @override
   State<CategoryFragment> createState() => _CategoryFragmentState();
 }
@@ -16,6 +19,7 @@ class _CategoryFragmentState extends State<CategoryFragment> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     var categoriesList = CategoryModel.getCategoriesList(context);
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -32,7 +36,14 @@ class _CategoryFragmentState extends State<CategoryFragment> {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
+                if(index%2==0){
+
+                }
                 return Container(
+                  padding: EdgeInsets.all(8),
+                  alignment: index%2==0?
+                  Alignment.centerRight
+                  :Alignment.centerLeft,
                   margin: EdgeInsets.all(5),
                   height: height * 0.3,
                   decoration: BoxDecoration(
@@ -46,11 +57,10 @@ class _CategoryFragmentState extends State<CategoryFragment> {
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         categoriesList[index].title,
-                        style: AppStyle.black20w500,
+                        style: AppStyle.white24bold,
                       ),
                       ElevatedButton(
                           style: ButtonStyle(
@@ -60,7 +70,9 @@ class _CategoryFragmentState extends State<CategoryFragment> {
                                 WidgetStateProperty.all(Colors.grey),
                             fixedSize: WidgetStateProperty.all(Size(width*0.4, height*0.05)),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            widget.onViewAllClicked(categoriesList[index!]);
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -71,10 +83,10 @@ class _CategoryFragmentState extends State<CategoryFragment> {
                               ),
                               CircleAvatar(
                                 radius: 23,
-                                backgroundColor: AppColors.black,
+                                backgroundColor: AppColors.white,
                                 child: Icon(
                                   Icons.arrow_forward_ios_rounded,
-                                  color: AppColors.white,
+                                  color: AppColors.black,
                                   size: 30,
                                 ),
                               )

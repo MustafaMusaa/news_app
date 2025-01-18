@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/provider/language_provider.dart';
 import 'package:news_app/provider/theme_provider.dart';
-import 'package:news_app/ui/home/category_details/category_details.dart';
 import 'package:news_app/ui/home/home_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -28,7 +27,6 @@ class MyApp extends StatelessWidget {
         initialRoute: HomeScreen.routeName,
         routes: {
           HomeScreen.routeName: (context) => HomeScreen(),
-          CategoryDetails.routeName: (context) => CategoryDetails(),
         },
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
